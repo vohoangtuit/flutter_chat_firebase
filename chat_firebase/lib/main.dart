@@ -1,3 +1,5 @@
+import 'package:chat_firebase/views/signin.dart';
+import 'package:chat_firebase/views/signup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,40 +13,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'TChat',
       theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xff1f1f1f),
+        primaryColor: Color(0xff145C9E),
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'TChat'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Welcome to TChat',
-              style: TextStyle(color: Colors.red, fontSize: 20),
-            ),
-          ],
-        ),
-      ),
+      //home: SigInScreen(),
+      home: SignUpScreen(),
     );
   }
 }
