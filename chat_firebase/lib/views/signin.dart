@@ -2,17 +2,19 @@ import 'package:chat_firebase/widgets/widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SigInScreen extends StatefulWidget {
+class SignInScreen extends StatefulWidget {
+  final Function toggle;
+  SignInScreen(this.toggle);
   @override
-  _SigInScreenState createState() => _SigInScreenState();
+  _SignInScreenState createState() => _SignInScreenState();
 }
 
-class _SigInScreenState extends State<SigInScreen> {
+class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       //appBar: appBarMain(context),
-      appBar: appBarMainTitle(context, 'Sign In'),
+      appBar: appBarWithTitle(context, 'Sign In'),
       body: Center(
         child: SingleChildScrollView(
             child: Container(
@@ -58,7 +60,15 @@ class _SigInScreenState extends State<SigInScreen> {
                       mainAxisAlignment:MainAxisAlignment.center,
                       children: <Widget>[
                       Text("Don't have account? ",style: mediumTextWhite(),),
-                      Text("Register now",style: TextStyle(decoration: TextDecoration.underline, color: Colors.white, fontSize: 12),)
+                      GestureDetector(
+                        onTap: (){
+                          widget.toggle();
+                        },
+                        child: Container(
+                          padding: EdgeInsets.symmetric(vertical: 8),
+                            child: Text("Register now",style: TextStyle(decoration: TextDecoration.underline, color: Colors.white, fontSize: 12),)
+                        ),
+                      )
                     ],)
                   ],
                 ),

@@ -6,8 +6,11 @@ INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app
 INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from [:firebase_auth] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\2575c609c2d3e0af3cb4d33248978892\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\d97528a9f5248a020af9cabcc8d0b704\firebase-auth-19.2.0\AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dbf54f70511da844359fc58b652dd63a\firebase-auth-interop-19.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\5d69950ce0704d2d42d074203add1b90\play-services-base-17.1.0\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e4b414c918102d86e9ff9e79dcc33b3d\jetified-firebase-common-19.3.0\AndroidManifest.xml:15:1-39:12
@@ -28,6 +31,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ad
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\3c2a8bdc77f66eb4db5652faf6d78000\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\3b222011816e7bd1e9ec680e2e0a6275\jetified-firebase-components-16.0.0\AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\485aaccbb77b0f7619124e3e208f5d48\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\0df53e4783ecc99e6030a380055c4feb\grpc-android-1.21.0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\7f097fc051dd9e3c632fcaaad716594a\firebase-database-collection-17.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a617da8f4a3c8c44fbc1ceddfe224999\protolite-well-known-types-17.0.0\AndroidManifest.xml:2:1-11:12
 INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\debug\AndroidManifest.xml:1:1-7:12
@@ -49,10 +55,14 @@ application
 ADDED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\main\AndroidManifest.xml:8:5-46:19
 MERGED from [:firebase_auth] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\d97528a9f5248a020af9cabcc8d0b704\firebase-auth-19.2.0\AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\d97528a9f5248a020af9cabcc8d0b704\firebase-auth-19.2.0\AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dbf54f70511da844359fc58b652dd63a\firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dbf54f70511da844359fc58b652dd63a\firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\5d69950ce0704d2d42d074203add1b90\play-services-base-17.1.0\AndroidManifest.xml:22:5-27:19
@@ -123,10 +133,16 @@ INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app
 INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\main\AndroidManifest.xml
 MERGED from [:firebase_auth] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\2575c609c2d3e0af3cb4d33248978892\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\2575c609c2d3e0af3cb4d33248978892\multidex-2.0.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\d97528a9f5248a020af9cabcc8d0b704\firebase-auth-19.2.0\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\d97528a9f5248a020af9cabcc8d0b704\firebase-auth-19.2.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dbf54f70511da844359fc58b652dd63a\firebase-auth-interop-19.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\dbf54f70511da844359fc58b652dd63a\firebase-auth-interop-19.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\5d69950ce0704d2d42d074203add1b90\play-services-base-17.1.0\AndroidManifest.xml:20:5-44
@@ -167,6 +183,12 @@ MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\Admin\.gra
 MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\3b222011816e7bd1e9ec680e2e0a6275\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\485aaccbb77b0f7619124e3e208f5d48\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\485aaccbb77b0f7619124e3e208f5d48\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\0df53e4783ecc99e6030a380055c4feb\grpc-android-1.21.0\AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\0df53e4783ecc99e6030a380055c4feb\grpc-android-1.21.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\7f097fc051dd9e3c632fcaaad716594a\firebase-database-collection-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\7f097fc051dd9e3c632fcaaad716594a\firebase-database-collection-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a617da8f4a3c8c44fbc1ceddfe224999\protolite-well-known-types-17.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\a617da8f4a3c8c44fbc1ceddfe224999\protolite-well-known-types-17.0.0\AndroidManifest.xml:7:5-9:41
 INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\debug\AndroidManifest.xml
 INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
@@ -177,14 +199,20 @@ INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app
 		INJECTED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\debug\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\debug\AndroidManifest.xml:6:5-66
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:14:5-67
 	android:name
 		ADDED from C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\android\app\src\debug\AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:firebase_auth] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\d97528a9f5248a020af9cabcc8d0b704\firebase-auth-19.2.0\AndroidManifest.xml:33:9-39:19
 MERGED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\d97528a9f5248a020af9cabcc8d0b704\firebase-auth-19.2.0\AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e4b414c918102d86e9ff9e79dcc33b3d\jetified-firebase-common-19.3.0\AndroidManifest.xml:32:9-36:35
 MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\e4b414c918102d86e9ff9e79dcc33b3d\jetified-firebase-common-19.3.0\AndroidManifest.xml:32:9-36:35
 	android:exported
@@ -201,6 +229,12 @@ ADDED from [:firebase_auth] C:\TU\Develop\Demo\flutter_chat_firebase\chat_fireba
 		ADDED from [:firebase_auth] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_auth] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-122
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar
+ADDED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:cloud_firestore] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-133
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
 ADDED from [:firebase_core] C:\TU\Develop\Demo\flutter_chat_firebase\chat_firebase\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 	android:value
@@ -229,6 +263,18 @@ ADDED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\cac
 		ADDED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\d97528a9f5248a020af9cabcc8d0b704\firebase-auth-19.2.0\AndroidManifest.xml:38:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:19.2.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\d97528a9f5248a020af9cabcc8d0b704\firebase-auth-19.2.0\AndroidManifest.xml:37:17-109
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:5-79
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\0df53e4783ecc99e6030a380055c4feb\grpc-android-1.21.0\AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\0df53e4783ecc99e6030a380055c4feb\grpc-android-1.21.0\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:13:22-76
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:21.3.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\58788809be09f6824e8c0ad049ab1661\jetified-firebase-firestore-21.3.0\AndroidManifest.xml:21:17-111
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\5d69950ce0704d2d42d074203add1b90\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
 	android:exported

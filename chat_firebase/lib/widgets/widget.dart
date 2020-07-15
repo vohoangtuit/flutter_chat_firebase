@@ -12,7 +12,7 @@ Widget appBarMain(BuildContext context){
     title: Image.asset('assets/images/logo.png', height: 45,),
   );
 }
-Widget appBarMainTitle(BuildContext context, String title){
+Widget appBarWithTitle(BuildContext context, String title){
   return AppBar(
     title: Text(title, style: titleTextWhite()),
     centerTitle: true,

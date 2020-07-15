@@ -1,9 +1,12 @@
 
 import 'package:chat_firebase/services/auth.dart';
+import 'package:chat_firebase/views/chat_room.dart';
 import 'package:chat_firebase/widgets/widget.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
+  final Function toggle;
+  SignUpScreen(this.toggle);
   @override
   _SignUpState createState() => _SignUpState();
 }
@@ -19,7 +22,7 @@ class _SignUpState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarMainTitle(context, 'Sign Up'),
+      appBar: appBarWithTitle(context, 'Sign Up'),
       body: Center(
         child: isLoading?CircularProgressIndicator():SingleChildScrollView(
           child: Container(
@@ -97,7 +100,13 @@ class _SignUpState extends State<SignUpScreen> {
                   mainAxisAlignment:MainAxisAlignment.center,
                   children: <Widget>[
                     Text("Already have account? ",style: mediumTextWhite(),),
-                    Text("SignIn now",style: TextStyle(decoration: TextDecoration.underline, color: Colors.white, fontSize: 12),)
+                    GestureDetector(
+                        onTap: (){
+                          widget.toggle();
+                        },
+                        child: Container(
+                          padding: EdgeInsets.symmetric(vertical: 8),
+                            child: Text("SignIn now",style: TextStyle(decoration: TextDecoration.underline, color: Colors.white, fontSize: 12),)))
                   ],)
               ],
             ),
@@ -114,10 +123,10 @@ class _SignUpState extends State<SignUpScreen> {
         isLoading =true;
       });
       authMethods.signUpWithEmailAndPassword(emailEditingController.text, passwordEditingController.text).then((data){
-        print("data "+data.toString());
         setState(() {
           isLoading =false;
         });
+        Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) =>ChatRoomScreen()));
       });
     }
   }

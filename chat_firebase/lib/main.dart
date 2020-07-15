@@ -1,3 +1,4 @@
+import 'package:chat_firebase/helper/authentication.dart';
 import 'package:chat_firebase/views/signin.dart';
 import 'package:chat_firebase/views/signup.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       //home: SigInScreen(),
-      home: SignUpScreen(),
+      home: Authenticate(),
     );
   }
 }
