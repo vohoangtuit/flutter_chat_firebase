@@ -1,4 +1,7 @@
 import 'package:chat_firebase/firebase_services/firebasse_database.dart';
+import 'package:chat_firebase/utils/constants.dart';
+import 'package:chat_firebase/utils/utils.dart';
+import 'package:chat_firebase/views/chat_conversation.dart';
 import 'package:chat_firebase/widgets/widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
@@ -62,7 +65,7 @@ class _SearchScreenState extends State<SearchScreen> {
     super.initState();
   }
   void handleSearch(){
-    firebaseDB.getUserByUsername(searchEditingController.text)
+    firebaseDB.getUserByUserName(searchEditingController.text)
         .then((data){
           setState(() {
             querySnapshot =data;
@@ -70,28 +73,17 @@ class _SearchScreenState extends State<SearchScreen> {
     }
     );
   }
-  void createChatRoomAndStartConversation(String userName){
-    List<String> users =[userName];
-    //firebaseDB.createChatRoom(chatRoomId, chatRoomMap);
-  }
   Widget userList(){
     return querySnapshot!=null?ListView.builder(
       itemCount: querySnapshot.documents.length,
         shrinkWrap: true,
         itemBuilder: (context, index){
-        print('userName ' +querySnapshot.documents[index].data['userName']);
-        return SearchItem(userName: querySnapshot.documents[index].data['userName'],email: querySnapshot.documents[index].data['email'],);
+        print('name ' +querySnapshot.documents[index].data[Constants.name]);
+        return SearchItem(userName: querySnapshot.documents[index].data[Constants.name],userEmail: querySnapshot.documents[index].data[Constants.email],);
     }):Container(
     );
   }
-}
-class SearchItem extends StatelessWidget {
-   String userName;
-   String email;
-   SearchItem({this.userName,this.email});
-
-  @override
-  Widget build(BuildContext context) {
+  Widget SearchItem({String userName, String userEmail}){
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
       child: Row(
@@ -100,12 +92,12 @@ class SearchItem extends StatelessWidget {
             crossAxisAlignment:CrossAxisAlignment.start,
             children: <Widget>[
               Text(userName,style: mediumTextWhite(),),
-              Text(email,style: mediumTextWhite(),),
+              Text(userEmail,style: mediumTextWhite(),),
             ],
           ), Spacer(),
           GestureDetector(
             onTap: (){
-
+              createChatRoomAndStartConversation(userName);
             },
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
@@ -116,5 +108,29 @@ class SearchItem extends StatelessWidget {
         ],
       ),
     );
+}
+  createChatRoomAndStartConversation(String userName){
+    if(userName!= Constants.myName){
+      String chatRoomId = getChatRoomId(userName, Constants.myName);
+      List<String> users =[userName, Constants.myName];
+      Map<String, dynamic> chatRoomMap={
+        "users":users,
+        "chatroomId":chatRoomId
+      };
+      FirebaseDatabaseMethods().createChatRoom(chatRoomId, chatRoomMap);
+      Navigator.push(context, MaterialPageRoute(
+          builder: (context)=>ChatConversationScreen()));
+    }else{
+      print('You cannot send message to yourself');
+    }
+
+  }
+  getChatRoomId(String a, String b) {
+    if (a.substring(0, 1).codeUnitAt(0) > b.substring(0, 1).codeUnitAt(0)) {
+      return "$b\_$a";
+    } else {
+      return "$a\_$b";
+    }
   }
 }
+

@@ -1,5 +1,7 @@
 import 'package:chat_firebase/firebase_services/firebase_auth.dart';
-import 'package:chat_firebase/helper/authentication.dart';
+import 'package:chat_firebase/utils/authentication.dart';
+import 'package:chat_firebase/utils/constants.dart';
+import 'package:chat_firebase/utils/utils.dart';
 import 'package:chat_firebase/views/search.dart';
 import 'package:chat_firebase/views/signin.dart';
 import 'package:chat_firebase/widgets/widget.dart';
@@ -11,7 +13,15 @@ class ChatRoomScreen extends StatefulWidget {
 }
 
 class _ChatRoomScreenState extends State<ChatRoomScreen> {
-  AuthMethods authMethods = new AuthMethods();
+  FireBaseAuth authMethods = new FireBaseAuth();
+  @override
+  void initState() {
+    super.initState();
+    getUserInfo();
+  }
+  getUserInfo()async{
+    Constants.myName =await UtilsFunctions.getStringKey(UtilsFunctions.sharedPreUserName);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

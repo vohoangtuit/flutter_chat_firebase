@@ -1,6 +1,8 @@
 
 import 'package:chat_firebase/firebase_services/firebase_auth.dart';
 import 'package:chat_firebase/firebase_services/firebasse_database.dart';
+import 'package:chat_firebase/utils/constants.dart';
+import 'package:chat_firebase/utils/utils.dart';
 import 'package:chat_firebase/views/chat_room.dart';
 import 'package:chat_firebase/widgets/widget.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +17,7 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpState extends State<SignUpScreen> {
   bool isLoading =false;
   final formKey = GlobalKey<FormState>();
-  AuthMethods authMethods = new AuthMethods();
+  FireBaseAuth firebaseAuth = new FireBaseAuth();
 
   FirebaseDatabaseMethods firebaseDB = new FirebaseDatabaseMethods();
 
@@ -125,15 +127,19 @@ class _SignUpState extends State<SignUpScreen> {
       setState(() {
         isLoading =true;
       });
-      authMethods.signUpWithEmailAndPassword(emailEditingController.text, passwordEditingController.text).then((data){
+      firebaseAuth.signUpWithEmailAndPassword(emailEditingController.text, passwordEditingController.text).then((data){
         setState(() {
           isLoading =false;
         });
         Map<String, String> userInfo ={
-          "name": userNameEditingController.text,
-          "email": emailEditingController.text
+          Constants.name: userNameEditingController.text,
+          Constants.email: emailEditingController.text
         };
         firebaseDB.uploadUserInfo(userInfo);
+        UtilsFunctions.saveBool(UtilsFunctions.sharedPreIsLogin, true);
+        UtilsFunctions.saveString(UtilsFunctions.sharedPreUserName, userNameEditingController.text);
+        UtilsFunctions.saveString(UtilsFunctions.sharedPreUserEmail, emailEditingController.text);
+
         Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) =>ChatRoomScreen()));
       });
     }

@@ -1,13 +1,33 @@
-import 'package:chat_firebase/helper/authentication.dart';
-import 'package:chat_firebase/views/signin.dart';
-import 'package:chat_firebase/views/signup.dart';
+import 'package:chat_firebase/utils/authentication.dart';
+import 'package:chat_firebase/utils/utils.dart';
+import 'package:chat_firebase/views/chat_room.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool isLoginApp =false;
+  @override
+  void initState() {
+    super.initState();
+    checkUserLogin();
+  }
+  checkUserLogin()async{
+    await UtilsFunctions.getBoolKey(UtilsFunctions.sharedPreIsLogin).then((value) {
+      if(value!=null){
+        setState(() {
+          isLoginApp =value;
+        });
+      }
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,8 +39,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      //home: SigInScreen(),
-      home: Authenticate(),
+      //home:  isLoginApp?ChatRoomScreen():Authenticate(),
+      home: isLoginApp != null ?  isLoginApp ? ChatRoomScreen() : Authenticate()
+          : Container(
+        child: Center(
+          child: Authenticate(),
+        ),
+      ),
     );
   }
 }
