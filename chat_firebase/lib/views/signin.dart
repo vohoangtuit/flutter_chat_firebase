@@ -36,7 +36,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       alignment: Alignment.centerRight,
                       child: Container(
                         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                        child: Text('Forget password?', style: mediumTextWhite(),),
+                        child: Text('Forget password?', style: normalTextWhite(),),
                       ),
                     ),
                     SizedBox(height:8),
@@ -59,14 +59,14 @@ class _SignInScreenState extends State<SignInScreen> {
                     Row(
                       mainAxisAlignment:MainAxisAlignment.center,
                       children: <Widget>[
-                      Text("Don't have account? ",style: mediumTextWhite(),),
+                      Text("Don't have account? ",style: normalTextWhite(),),
                       GestureDetector(
                         onTap: (){
                           widget.toggle();
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(vertical: 8),
-                            child: Text("Register now",style: TextStyle(decoration: TextDecoration.underline, color: Colors.white, fontSize: 12),)
+                            child: Text("Register now",style: TextStyle(decoration: TextDecoration.underline, color: Colors.white, fontSize: 14),)
                         ),
                       )
                     ],)

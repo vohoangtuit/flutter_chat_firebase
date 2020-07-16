@@ -1,5 +1,5 @@
+import 'package:chat_firebase/firebase_services/firebase_auth.dart';
 import 'package:chat_firebase/helper/authentication.dart';
-import 'package:chat_firebase/services/auth.dart';
 import 'package:chat_firebase/views/search.dart';
 import 'package:chat_firebase/views/signin.dart';
 import 'package:chat_firebase/widgets/widget.dart';
@@ -37,8 +37,5 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
         },
       ),
     );
-  }
-  void handleSignOut(){
-
   }
 }

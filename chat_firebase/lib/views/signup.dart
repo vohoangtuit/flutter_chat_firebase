@@ -1,5 +1,6 @@
 
-import 'package:chat_firebase/services/auth.dart';
+import 'package:chat_firebase/firebase_services/firebase_auth.dart';
+import 'package:chat_firebase/firebase_services/firebasse_database.dart';
 import 'package:chat_firebase/views/chat_room.dart';
 import 'package:chat_firebase/widgets/widget.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,8 @@ class _SignUpState extends State<SignUpScreen> {
   bool isLoading =false;
   final formKey = GlobalKey<FormState>();
   AuthMethods authMethods = new AuthMethods();
+
+  FirebaseDatabaseMethods firebaseDB = new FirebaseDatabaseMethods();
 
   TextEditingController userNameEditingController = TextEditingController();
   TextEditingController emailEditingController = TextEditingController();
@@ -69,7 +72,7 @@ class _SignUpState extends State<SignUpScreen> {
                   alignment: Alignment.centerRight,
                   child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    child: Text('Forget password?', style: mediumTextWhite(),),
+                    child: Text('Forget password?', style: normalTextWhite(),),
                   ),
                 ),
                 SizedBox(height:8),
@@ -99,14 +102,14 @@ class _SignUpState extends State<SignUpScreen> {
                 Row(
                   mainAxisAlignment:MainAxisAlignment.center,
                   children: <Widget>[
-                    Text("Already have account? ",style: mediumTextWhite(),),
+                    Text("Already have account? ",style: normalTextWhite(),),
                     GestureDetector(
                         onTap: (){
                           widget.toggle();
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(vertical: 8),
-                            child: Text("SignIn now",style: TextStyle(decoration: TextDecoration.underline, color: Colors.white, fontSize: 12),)))
+                            child: Text("SignIn now",style: TextStyle(decoration: TextDecoration.underline, color: Colors.white, fontSize: 14),)))
                   ],)
               ],
             ),
@@ -126,6 +129,11 @@ class _SignUpState extends State<SignUpScreen> {
         setState(() {
           isLoading =false;
         });
+        Map<String, String> userInfo ={
+          "name": userNameEditingController.text,
+          "email": emailEditingController.text
+        };
+        firebaseDB.uploadUserInfo(userInfo);
         Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) =>ChatRoomScreen()));
       });
     }
