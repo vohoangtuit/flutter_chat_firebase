@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Widget materialApp(BuildContext context, String title) {
@@ -54,7 +55,21 @@ TextStyle titleTextWhite() {
 TextStyle normalTextStyleButton(Color color) {
   return TextStyle(color: color, fontSize: 17);
 }
-
+TextStyle textMessage() {
+  return TextStyle(color: Colors.white, fontSize: 16);
+}
+Decoration decorationMessageRight(){
+  return BoxDecoration(
+   color: Colors.blue,
+    borderRadius: BorderRadius.only(topLeft: Radius.circular(23),topRight: Radius.circular(23),bottomLeft: Radius.circular(23)),
+  );
+}
+Decoration decorationMessageLeft(){
+  return BoxDecoration(
+    color: Colors.grey,
+    borderRadius: BorderRadius.only(topLeft: Radius.circular(23),topRight: Radius.circular(23),bottomRight: Radius.circular(23)),
+  );
+}
 BoxDecoration decorationButton(Color color, double borderRadius) {
   return BoxDecoration(
     color: color,

@@ -1,7 +1,7 @@
 import 'package:chat_firebase/firebase_services/firebasse_database.dart';
 import 'package:chat_firebase/utils/constants.dart';
 import 'package:chat_firebase/utils/utils.dart';
-import 'package:chat_firebase/views/chat_conversation.dart';
+import 'package:chat_firebase/views/chat.dart';
 import 'package:chat_firebase/widgets/widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
@@ -28,7 +28,8 @@ class _SearchScreenState extends State<SearchScreen> {
               color: Colors.grey,
               child: Row(
                 children: <Widget>[
-                  Expanded(child: TextField(
+                  Expanded(
+                      child: TextField(
                     controller: searchEditingController,
                     style: normalTextWhite(),
                     decoration: InputDecoration(
@@ -78,7 +79,7 @@ class _SearchScreenState extends State<SearchScreen> {
       itemCount: querySnapshot.documents.length,
         shrinkWrap: true,
         itemBuilder: (context, index){
-        print('name ' +querySnapshot.documents[index].data[Constants.name]);
+       // print('name ' +querySnapshot.documents[index].data[Constants.name]);
         return SearchItem(userName: querySnapshot.documents[index].data[Constants.name],userEmail: querySnapshot.documents[index].data[Constants.email],);
     }):Container(
     );
@@ -119,7 +120,7 @@ class _SearchScreenState extends State<SearchScreen> {
       };
       FirebaseDatabaseMethods().createChatRoom(chatRoomId, chatRoomMap);
       Navigator.push(context, MaterialPageRoute(
-          builder: (context)=>ChatConversationScreen()));
+          builder: (context)=>ChatScreen(chatRoomId,userName)));
     }else{
       print('You cannot send message to yourself');
     }
