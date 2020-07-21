@@ -1,5 +1,6 @@
 import 'package:chat_firebase/firebase_services/firebase_auth.dart';
 import 'package:chat_firebase/firebase_services/firebasse_database.dart';
+import 'package:chat_firebase/shared_preferences/shared_preference.dart';
 import 'package:chat_firebase/utils/authentication.dart';
 import 'package:chat_firebase/utils/constants.dart';
 import 'package:chat_firebase/utils/utils.dart';
@@ -7,6 +8,7 @@ import 'package:chat_firebase/views/chat.dart';
 import 'package:chat_firebase/views/search.dart';
 import 'package:chat_firebase/views/signin.dart';
 import 'package:chat_firebase/widgets/widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ChatRoomScreen extends StatefulWidget {
@@ -24,7 +26,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
     getUserInfo();
   }
   getUserInfo()async{
-    Constants.myName =await UtilsFunctions.getStringKey(UtilsFunctions.sharedPreUserName);
+    Constants.myName =await SharedPre.getStringKey(SharedPre.sharedPreUserName);
     firebaseDatabaseMethods.getUserChats(Constants.myName).then((data){
       setState(() {
         chatRoomStream = data;
@@ -56,6 +58,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
           GestureDetector(
             onTap: (){
               authMethods.signOut();
+              SharedPre.clearData();
               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>Authenticate()));
             },
             child: Container(
@@ -88,6 +91,7 @@ class ChatRoomItem extends StatelessWidget {
       },
       child: Container(
         color: Colors.grey,
+        margin: EdgeInsets.only(bottom: 2),
         padding: EdgeInsets.symmetric(horizontal: 10,vertical: 8),
         child: Row(
           children: <Widget>[

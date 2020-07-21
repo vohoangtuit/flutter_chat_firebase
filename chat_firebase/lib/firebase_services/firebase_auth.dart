@@ -1,4 +1,5 @@
 import 'package:chat_firebase/models/user.dart';
+import 'package:chat_firebase/shared_preferences/shared_preference.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class FireBaseAuth {

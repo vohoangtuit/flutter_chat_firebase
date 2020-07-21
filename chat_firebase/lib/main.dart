@@ -1,3 +1,4 @@
+import 'package:chat_firebase/shared_preferences/shared_preference.dart';
 import 'package:chat_firebase/utils/authentication.dart';
 import 'package:chat_firebase/utils/utils.dart';
 import 'package:chat_firebase/views/chat_room.dart';
@@ -20,7 +21,7 @@ class _MyAppState extends State<MyApp> {
     checkUserLogin();
   }
   checkUserLogin()async{
-    await UtilsFunctions.getBoolKey(UtilsFunctions.sharedPreIsLogin).then((value) {
+    await SharedPre.getBoolKey(SharedPre.sharedPreIsLogin).then((value) {
       if(value!=null){
         setState(() {
           isLoginApp =value;

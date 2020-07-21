@@ -1,5 +1,7 @@
 import 'package:chat_firebase/firebase_services/firebase_auth.dart';
 import 'package:chat_firebase/firebase_services/firebasse_database.dart';
+import 'package:chat_firebase/shared_preferences/shared_preference.dart';
+import 'package:chat_firebase/utils/constants.dart';
 import 'package:chat_firebase/utils/utils.dart';
 import 'package:chat_firebase/widgets/widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -119,18 +121,28 @@ class _SignInScreenState extends State<SignInScreen> {
         isLoading =true;
       });
       fireBaseAuth.signInWithEmailAndPassWord(emailEditingController.text, passwordEditingController.text).then((data){
-        setState(() {
-          isLoading =false;
-        });
+
         if(data!=null){
           firebaseDB.getUserByEmail(emailEditingController.text).then((data){
             userInfo = data;
-            UtilsFunctions.saveBool(UtilsFunctions.sharedPreIsLogin, true);
-            UtilsFunctions.saveString(UtilsFunctions.sharedPreUserName, userInfo.documents[0].data["name"]);
-            UtilsFunctions.saveString(UtilsFunctions.sharedPreUserEmail, userInfo.documents[0].data["email"]);
+            SharedPre.saveBool(SharedPre.sharedPreIsLogin, true);
+            SharedPre.saveString(SharedPre.sharedPreUserName, userInfo.documents[0].data[Constants.name]);
+            SharedPre.saveString(SharedPre.sharedPreUserEmail, userInfo.documents[0].data[Constants.email]);
+            Future.delayed(
+              Duration(seconds: 3),
+                  () async {
+                    setState(() {
+                      isLoading =false;
+                    });
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) =>ChatRoomScreen()));
+              },
+            );
           });
-
-          Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) =>ChatRoomScreen()));
+        }else{
+          setState(() {
+            isLoading =false;
+          });
+          print("Error SignIn");
         }
       });
     }

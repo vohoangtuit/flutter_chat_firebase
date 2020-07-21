@@ -1,6 +1,7 @@
 
 import 'package:chat_firebase/firebase_services/firebase_auth.dart';
 import 'package:chat_firebase/firebase_services/firebasse_database.dart';
+import 'package:chat_firebase/shared_preferences/shared_preference.dart';
 import 'package:chat_firebase/utils/constants.dart';
 import 'package:chat_firebase/utils/utils.dart';
 import 'package:chat_firebase/views/chat_room.dart';
@@ -128,19 +129,23 @@ class _SignUpState extends State<SignUpScreen> {
         isLoading =true;
       });
       firebaseAuth.signUpWithEmailAndPassword(emailEditingController.text, passwordEditingController.text).then((data){
-        setState(() {
-          isLoading =false;
-        });
+
         Map<String, String> userInfo ={
           Constants.name: userNameEditingController.text,
           Constants.email: emailEditingController.text
         };
         firebaseDB.uploadUserInfo(userInfo);
-        UtilsFunctions.saveBool(UtilsFunctions.sharedPreIsLogin, true);
-        UtilsFunctions.saveString(UtilsFunctions.sharedPreUserName, userNameEditingController.text);
-        UtilsFunctions.saveString(UtilsFunctions.sharedPreUserEmail, emailEditingController.text);
+        SharedPre.saveBool(SharedPre.sharedPreIsLogin, true);
+        SharedPre.saveString(SharedPre.sharedPreUserName, userNameEditingController.text);
+        SharedPre.saveString(SharedPre.sharedPreUserEmail, emailEditingController.text);
+        Future.delayed(Duration(seconds: 3),()async{
+          setState(() {
+            isLoading =false;
+          });
+          Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) =>ChatRoomScreen()));
+        }
+        );
 
-        Navigator.pushReplacement(context, MaterialPageRoute(builder:(context) =>ChatRoomScreen()));
       });
     }
   }
