@@ -129,10 +129,16 @@ class _SignUpState extends State<SignUpScreen> {
         isLoading =true;
       });
       firebaseAuth.signUpWithEmailAndPassword(emailEditingController.text, passwordEditingController.text).then((data){
+        print("data signin ${data.toString()}");
 
         Map<String, String> userInfo ={
-          Constants.name: userNameEditingController.text,
-          Constants.email: emailEditingController.text
+          Constants.username: userNameEditingController.text,
+          Constants.email: emailEditingController.text,
+          Constants.fullName: '',
+          Constants.birthday: '',
+          Constants.photoURL: '',
+          Constants.country: '',
+          Constants.password: passwordEditingController.text,
         };
         firebaseDB.uploadUserInfo(userInfo);
         SharedPre.saveBool(SharedPre.sharedPreIsLogin, true);

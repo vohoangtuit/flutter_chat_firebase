@@ -80,7 +80,7 @@ class _SearchScreenState extends State<SearchScreen> {
         shrinkWrap: true,
         itemBuilder: (context, index){
        // print('name ' +querySnapshot.documents[index].data[Constants.name]);
-        return SearchItem(userName: querySnapshot.documents[index].data[Constants.name],userEmail: querySnapshot.documents[index].data[Constants.email],);
+        return SearchItem(userName: querySnapshot.documents[index].data[Constants.username],userEmail: querySnapshot.documents[index].data[Constants.email],);
     }):Container(
     );
   }

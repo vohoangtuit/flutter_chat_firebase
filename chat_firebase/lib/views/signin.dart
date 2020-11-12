@@ -126,7 +126,7 @@ class _SignInScreenState extends State<SignInScreen> {
           firebaseDB.getUserByEmail(emailEditingController.text).then((data){
             userInfo = data;
             SharedPre.saveBool(SharedPre.sharedPreIsLogin, true);
-            SharedPre.saveString(SharedPre.sharedPreUserName, userInfo.documents[0].data[Constants.name]);
+            SharedPre.saveString(SharedPre.sharedPreUserName, userInfo.documents[0].data[Constants.username]);
             SharedPre.saveString(SharedPre.sharedPreUserEmail, userInfo.documents[0].data[Constants.email]);
             Future.delayed(
               Duration(seconds: 3),

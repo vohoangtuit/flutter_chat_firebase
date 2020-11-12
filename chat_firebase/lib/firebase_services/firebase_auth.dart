@@ -14,7 +14,7 @@ class FireBaseAuth {
       AuthResult result = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
       FirebaseUser firebaseUser = result.user;
-      return _userFromFirebase(firebaseUser);
+      return _userFromFirebase(firebaseUser)!=null?_userFromFirebase(firebaseUser):null;
     } catch (e) {
       print('Error SignIn ${e.toString()}');
     }
